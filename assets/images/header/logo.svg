@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3400" height="1234" viewBox="0 0 3400 1234">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.057" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e62961"/>
+      <stop offset="1" stop-color="#f28345"/>
+    </linearGradient>
+    <clipPath id="clip-COLOR_WHITE">
+      <rect width="3400" height="1234"/>
+    </clipPath>
+  </defs>
+  <g id="COLOR_WHITE" data-name="COLOR WHITE" clip-path="url(#clip-COLOR_WHITE)">
+    <g id="Group_15" data-name="Group 15" transform="translate(-0.461 -77.019)">
+
+      <path id="Union_7" data-name="Union 7" d="M370.762,387.257l-89.1-97.379H2.75V274.384H326.739v.2L360.2,308.023a9.056,9.056,0,0,0,12.826,0l34.989-34.969a9.093,9.093,0,0,0,0-12.826l-34.989-34.991a9.056,9.056,0,0,0-12.826,0L326.539,258.9H253.3l-42.6-46.551H90.084V196.853H414.073v.236l33.453,33.473a9.093,9.093,0,0,0,12.826,0l34.989-34.989a9.054,9.054,0,0,0,0-12.826l-34.989-34.991a9.093,9.093,0,0,0-12.826,0l-33.638,33.66H182.4l-10.121-11.072-14.094-15.4-27.113-26.394H2.75V113.055H326.739v.189l33.542,33.563a8.94,8.94,0,0,0,12.636,0L408.1,111.627a8.94,8.94,0,0,0,0-12.636L372.918,63.81a8.942,8.942,0,0,0-12.636,0L326.56,97.554H99.23l-66.9-65.121C26.965,27.2,0,0,0,0H364.53c2.112,0,4.226.042,6.338.106C474.909,3.445,558.221,88.828,558.221,193.692c0,104.845-83.312,190.228-187.353,193.565Z" transform="translate(288.462 455.02)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

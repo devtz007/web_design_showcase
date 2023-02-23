@@ -1,0 +1,99 @@
+/*import sass*/ /*-------------------------------------------------*\
+                 flex library code
+\*-------------------------------------------------*/
+/*------------------------------------*\
+           reusable css
+\*------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "hkgrotesk-bold";
+}
+
+h1 {
+  font-size: 1rem;
+  color: #fbfbfb;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 745px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+p {
+  letter-spacing: normal;
+  line-height: 1.5;
+  text-transform: none;
+  font-style: normal;
+  font-weight: normal;
+}
+
+table,
+tr,
+td {
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+
+em {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.width-wrapper {
+  width: 90%;
+}
+
+.sec-main-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  color: #0e0e0f;
+}
+.sec-main-heading .color {
+  color: #ffd60a;
+}
+@media screen and (max-width: 480px) {
+  .sec-main-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .sec-main-heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.sec-pad {
+  padding: 100px 0;
+}
+@media screen and (max-width: 480px) {
+  .sec-pad {
+    padding: 25px 0;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}/*# sourceMappingURL=reusable_sass.css.map */

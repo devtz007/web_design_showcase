@@ -1,0 +1,121 @@
+/*-------------------------------------------------*\
+                input-type-1
+\*-------------------------------------------------*/
+@mixin input-type-1($input-width, $btn-bgColor) {
+  .input-type-1 {
+    @include flex-row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+    input {
+      border: none;
+      border-radius: 0;
+      padding: 8px 10px;
+      &::-webkit-input-placeholder {
+        color: #b8b8b8;
+        font-size: 1rem;
+      }
+      &:nth-child(1) {
+        width: $input-width;
+        border: 1px solid #b8b8b8;
+        border-right: 0px solid var(--lighter-gray);
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 3px;
+      }
+      &[type="submit"] {
+        background-color: $btn-bgColor;
+        border: 1px solid $btn-bgColor;
+        color: var(--main-color-alt);
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 3px;
+        cursor: pointer;
+      }
+    }
+    .myBtn-b {
+      background-color: $btn-bgColor;
+      border: 1px solid $btn-bgColor;
+      color: var(--main-color-alt);
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 3px;
+      cursor: pointer;
+    }
+  }
+}
+
+/*-------------------------------------------------*\
+                input-type-2
+\*-------------------------------------------------*/
+@mixin input-type-2($input-width, $border-color, $color) {
+  .input-type-2 {
+    border-radius: 0;
+    padding: 8px 10px;
+    color: $color;
+    font-size: 1rem;
+    width: $input-width;
+    border: 1px solid $border-color;
+  }
+}
+/*-------------------------------------------------*\
+                input-type-submit (submit)
+\*-------------------------------------------------*/
+@mixin input-type-submit(
+  $color,
+  $bg-color,
+  $padding-top-bot,
+  $padding-left-right
+) {
+  .input-type-submit {
+    border-radius: 0;
+    padding: $padding-top-bot $padding-left-right;
+    color: $color;
+    background-color: $bg-color;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+}
+@mixin input-type-check-box {
+  input[type="checkbox"] {
+    margin: 0;
+  }
+}
+
+/*-------------------------------------------------*\
+                section heading title
+\*-------------------------------------------------*/
+@mixin sec-heading-title($h2-color) {
+  %font-weight {
+    font-weight: 700;
+  }
+  @include flex-left;
+  position: relative;
+  text-transform: uppercase;
+  //background-color: rgb(24, 21, 20);
+  //height: 100px;
+  .shadow-title-name {
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    @include flex-cen;
+    font-size: calc(4rem);
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+  .title-name {
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    -webkit-transform: translate(-2%, -55%);
+        -ms-transform: translate(-2%, -55%);
+            transform: translate(-2%, -55%);
+    font-size: 2.5rem;
+    @extend %font-weight;
+    color: $h2-color;
+  }
+}
+

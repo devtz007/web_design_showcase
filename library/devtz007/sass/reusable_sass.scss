@@ -1,0 +1,90 @@
+/*import sass*/
+//import sass flex library
+
+@import "./variable_placeholder_reusable";
+@import "./flex_library";
+
+/*------------------------------------*\
+           reusable css
+\*------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "hkgrotesk-bold";
+}
+h1 {
+  font-size: 1rem;
+  color: $--slogan-heading-C;
+}
+h2 {
+  font-size: 2.5rem;
+  @media screen and (max-width: 745px) {
+    & {
+      font-size: 2rem;
+    }
+  }
+}
+h3 {
+  font-size: 1.2rem;
+
+}
+input,
+textarea {
+  outline: none;
+}
+p {
+  letter-spacing: normal;
+  line-height: 1.5;
+  text-transform: none;
+  font-style: normal;
+  font-weight: normal;
+}
+table,
+tr,
+td {
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+em {
+  font-weight: 600;
+  font-style: italic;
+}
+//width-wrapper
+.width-wrapper {
+  width: 90%;
+}
+//sec-main-heading
+.sec-main-heading {
+  @include flex-left;
+  width: 100%;
+  margin-bottom: 100px;
+  color: $--sec-main-heading-C;
+  .color {
+    color: #ffd60a;
+  }
+  @media screen and (max-width: 480px) {
+    & {
+      @include flex-cen;
+      margin-bottom: 50px;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+//section padding
+.sec-pad {
+  padding: 100px 0;
+  @media screen and (max-width: 480px) {
+    & {
+      padding: 25px 0;
+    }
+  }
+}
+//section
+section {
+  @include flex-cen;
+  min-height: 100vh;
+}

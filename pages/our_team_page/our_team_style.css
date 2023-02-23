@@ -1,0 +1,243 @@
+/*import sass*/ /*-------------------------------------------------*\
+                 flex library code
+\*-------------------------------------------------*/
+/*import sass*/ /*-------------------------------------------------*\
+                 flex library code
+\*-------------------------------------------------*/
+/*-------------------------------------------------*\
+                extend placeholder
+\*-------------------------------------------------*/
+.our-team-members .group.team-members .item .image, .our-team-members .group.ceo .item.image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*-------------------------------------------------*\
+    our-team-slogan section
+\*-------------------------------------------------*/
+.our-team-slogan {
+  background: rgb(230, 41, 97);
+  background: linear-gradient(132deg, rgb(230, 41, 97) 0%, rgb(242, 131, 69) 100%);
+}
+.our-team-slogan .width-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-team-slogan .group:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 45px;
+}
+@media screen and (max-width: 480px) {
+  .our-team-slogan .group:nth-child(1) {
+    padding: 0 0px;
+  }
+}
+.our-team-slogan .group:nth-child(1) .item {
+  flex: 1 1;
+}
+.our-team-slogan .group:nth-child(1) .item.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 2 1;
+}
+@media screen and (max-width: 880px) {
+  .our-team-slogan .group:nth-child(1) .item.heading {
+    padding: 100px 0;
+  }
+}
+.our-team-slogan .group:nth-child(1) .item.heading h2 {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+.our-team-slogan .group:nth-child(1) .item.heading p {
+  font-size: 1.2rem;
+}
+.our-team-slogan .group:nth-child(1) .item.image {
+  height: 400px;
+  background-image: url(../../assets/images/our_team/our_team.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media screen and (max-width: 880px) {
+  .our-team-slogan .group:nth-child(1) .item.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+/*-------------------------------------------------*\
+    our-team-members section
+\*-------------------------------------------------*/
+.our-team-members {
+  padding-bottom: 50px;
+}
+.our-team-members .group.team-members .item, .our-team-members .group.ceo {
+  background-color: whitesmoke;
+}
+@media screen and (max-width: 480px) {
+  .our-team-members {
+    padding-bottom: 50px;
+  }
+}
+.our-team-members .width-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .width-wrapper {
+    width: 100%;
+    gap: 50px;
+  }
+}
+.our-team-members .group.ceo {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding: 25px;
+}
+@media screen and (max-width: 805px) {
+  .our-team-members .group.ceo {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
+.our-team-members .group.ceo .item {
+  flex: 1 1;
+}
+.our-team-members .group.ceo .item.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 2 1;
+}
+@media screen and (max-width: 940px) {
+  .our-team-members .group.ceo .item.info {
+    flex: 1 1;
+  }
+}
+.our-team-members .group.ceo .item.info .name h3 {
+  font-size: 3rem;
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .group.ceo .item.info .name h3 {
+    font-size: 1.5rem;
+  }
+}
+.our-team-members .group.ceo .item.info .designation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.our-team-members .group.ceo .item.image {
+  min-height: 350px;
+  background-image: url(../../assets/images/our_team/team_members/girl.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.our-team-members .group.ceo .item.image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
+}
+.our-team-members .group.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  padding: 25px;
+  /*  .item:nth-child(4) {
+    .image {
+      background-image: url(../../assets/images/our_team/team_members/1657659227.jpg);
+    }
+  }*/
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .group.team-members {
+    padding: 0px;
+  }
+}
+.our-team-members .group.team-members .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .group.team-members .heading {
+    font-size: 1.2rem;
+  }
+}
+.our-team-members .group.team-members .team-members-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 25px;
+}
+@media screen and (max-width: 940px) {
+  .our-team-members .group.team-members .team-members-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .group.team-members .team-members-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.our-team-members .group.team-members .item {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .group.team-members .item {
+    padding: 25px;
+  }
+}
+.our-team-members .group.team-members .item .image {
+  min-height: 350px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+.our-team-members .group.team-members .item .name {
+  margin-bottom: 2.5px;
+}
+.our-team-members .group.team-members .item .name h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .our-team-members .group.team-members .item .name h3 {
+    font-size: 1.2rem;
+  }
+}
+.our-team-members .group.team-members .item .designation {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.our-team-members .group.team-members .item:nth-child(1) .image {
+  background-image: url(../../assets/images/our_team/team_members/boy.jpg);
+}
+.our-team-members .group.team-members .item:nth-child(2) .image {
+  background-image: url(../../assets/images/our_team/team_members/boy.jpg);
+}
+.our-team-members .group.team-members .item:nth-child(3) .image {
+  background-image: url(../../assets/images/our_team/team_members/girl.jpg);
+}/*# sourceMappingURL=our_team_style.css.map */

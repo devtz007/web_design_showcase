@@ -1,0 +1,188 @@
+/*import sass*/ /*-------------------------------------------------*\
+                 flex library code
+\*-------------------------------------------------*/
+/*-------------------------------------------------*\
+    contact-us section
+\*-------------------------------------------------*/
+body {
+  background-color: #fbfbfb;
+}
+
+.contact-us {
+  position: relative;
+  padding-bottom: 200px;
+}
+@media screen and (max-width: 480px) {
+  .contact-us {
+    padding-bottom: 100px;
+  }
+}
+.contact-us::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 55%;
+  background: rgb(230, 41, 97);
+  background: linear-gradient(132deg, rgb(230, 41, 97) 0%, rgb(242, 131, 69) 100%);
+}
+.contact-us .width-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us .group:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.contact-us .group:nth-child(1) > * {
+  z-index: 1;
+}
+.contact-us .group:nth-child(1) .item {
+  flex: 1 1;
+}
+.contact-us .group:nth-child(1) .item.info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 150px 35px;
+}
+.contact-us .group:nth-child(1) .item.info .heading h2 {
+  font-size: 5rem;
+  color: #fbfbfb;
+}
+@media screen and (max-width: 480px) {
+  .contact-us .group:nth-child(1) .item.info .heading h2 {
+    font-size: 2.5rem;
+  }
+}
+.contact-us .group:nth-child(1) .item.info .heading-info p {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 320px) {
+  .contact-us .group:nth-child(1) .item.info {
+    padding: 75px 0px;
+  }
+}
+.contact-us .group:nth-child(1) .item.image {
+  background-image: url(../../assets/images/contact_us/contact.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media screen and (max-width: 910px) {
+  .contact-us .group:nth-child(1) .item.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.2;
+  }
+}
+.contact-us .group:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.contact-us .group:nth-child(2) .item.get-in-touch, .contact-us .group:nth-child(2) .item.contact-form {
+  padding: 55px;
+}
+@media screen and (max-width: 480px) {
+  .contact-us .group:nth-child(2) .item.get-in-touch, .contact-us .group:nth-child(2) .item.contact-form {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 910px) {
+  .contact-us .group:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.contact-us .group:nth-child(2) .item {
+  flex: 1 1;
+}
+.contact-us .group:nth-child(2) .item.contact-form {
+  background: rgba(41, 51, 92, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.contact-us .group:nth-child(2) .item.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact-us .group:nth-child(2) .item.contact-form form .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-us .group:nth-child(2) .item.contact-form form .form-item label {
+  color: #fbfbfb;
+}
+.contact-us .group:nth-child(2) .item.contact-form form .form-item input,
+.contact-us .group:nth-child(2) .item.contact-form form .form-item textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+.contact-us .group:nth-child(2) .item.contact-form form .myBtn-cont {
+  margin-top: 15px;
+}
+.contact-us .group:nth-child(2) .item.contact-form form .myBtn-cont button {
+  padding: 15px 25px;
+  color: #fbfbfb;
+  background-color: #e62961;
+  border-radius: 8px;
+}
+.contact-us .group:nth-child(2) .item.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #29335c;
+  border-radius: 8px;
+}
+.contact-us .group:nth-child(2) .item.get-in-touch .phone p, .contact-us .group:nth-child(2) .phone .item.get-in-touch p, .contact-us .group:nth-child(2) .item.get-in-touch .email p, .contact-us .group:nth-child(2) .email .item.get-in-touch p, .contact-us .group:nth-child(2) .item.get-in-touch .email a, .contact-us .group:nth-child(2) .email .item.get-in-touch a, .contact-us .group:nth-child(2) .item.get-in-touch .location .location-info ul, .contact-us .group:nth-child(2) .item.get-in-touch .location .location-info p {
+  color: #fbfbfb;
+}
+.contact-us .group:nth-child(2) .item.get-in-touch h3 {
+  color: #ffd60a;
+}
+.contact-us .group:nth-child(2) .item.get-in-touch .location {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-us .group:nth-child(2) .item.get-in-touch .location .name p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffd60a;
+}
+@media screen and (max-width: 480px) {
+  .contact-us .group:nth-child(2) .item.get-in-touch .location .name p {
+    font-size: 1.5rem;
+  }
+}
+.contact-us .group:nth-child(2) .item.get-in-touch .location .location-info ul {
+  list-style-type: circle;
+  margin-left: 50px;
+}
+.contact-us .group:nth-child(2) .social {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.contact-us .group:nth-child(2) .social a {
+  width: 35px;
+  height: 35px;
+}
+.contact-us .group:nth-child(2) .social a img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=contact_us_style.css.map */

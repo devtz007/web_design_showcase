@@ -1,0 +1,92 @@
+/*import sass*/
+//import sass flex library
+@import "../../library/devtz007/sass/flex_library";
+@import "../../library/devtz007/sass/variable_placeholder_reusable";
+@import "../../library/devtz007/sass/extend_placeholder_reusable";
+
+/*-------------------------------------------------*\
+    body
+\*-------------------------------------------------*/
+
+/*-------------------------------------------------*\
+    pricing section
+\*-------------------------------------------------*/
+
+.pricing {
+  background: rgb(230, 41, 97);
+  background: -o-linear-gradient(
+    318deg,
+    rgb(230, 41, 97) 0%,
+    rgb(242, 131, 69) 100%
+  );
+  background: linear-gradient(
+    132deg,
+    rgb(230, 41, 97) 0%,
+    rgb(242, 131, 69) 100%
+  );
+  min-height: 100vh;
+
+  .sec-main-heading {
+    @include flex-cen;
+    h2 {
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+  .group-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 25px;
+    @media screen and (max-width: 1100px) {
+      & {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+    }
+    @media screen and (max-width: 500px) {
+      & {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+  }
+  .group {
+    %--color {
+      color: #fbfbfb;
+    }
+    %--color-price {
+      color: $--pricing-type-C;
+    }
+    @extend %--glass-morphism;
+    @include flex-cen-col-justify-top;
+    gap: 15px;
+    padding: 45px;
+    @media screen and (max-width: 500px) {
+      & {
+        padding: 15px;
+      }
+    }
+    .item {
+      @include flex-cen;
+      width: 100%;
+      padding: 0 25px;
+      p,
+      h3 {
+        @extend %--color;
+        text-align: center;
+      }
+    }
+
+    .type {
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+    .cost {
+      p {
+        @extend %--color-price;
+        font-size: 2rem;
+      }
+    }
+  }
+}

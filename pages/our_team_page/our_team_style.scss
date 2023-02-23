@@ -1,0 +1,260 @@
+/*import sass*/
+//import sass flex library
+@import "../../library/devtz007/sass/flex_library";
+@import "../../library/devtz007/sass/variable_placeholder_reusable";
+@import "../../library/devtz007/sass/extend_placeholder_reusable";
+
+/*-------------------------------------------------*\
+    our-team-slogan section
+\*-------------------------------------------------*/
+.our-team-slogan {
+  background: rgb(230, 41, 97);
+  background: -o-linear-gradient(
+    318deg,
+    rgb(230, 41, 97) 0%,
+    rgb(242, 131, 69) 100%
+  );
+  background: linear-gradient(
+    132deg,
+    rgb(230, 41, 97) 0%,
+    rgb(242, 131, 69) 100%
+  );
+  .width-wrapper {
+    @include flex-cen;
+  }
+  .group:nth-child(1) {
+    @include flex-cen-row;
+    position: relative;
+    width: 100%;
+    padding: 0 45px;
+
+    @media screen and (max-width: 480px) {
+      & {
+        padding: 0 0px;
+      }
+    }
+    .item {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1;
+              flex: 1 1;
+    }
+    .item.heading {
+      @include flex-col;
+      gap: 25px;
+      -webkit-box-flex: 2;
+          -ms-flex: 2 1;
+              flex: 2 1;
+      @media screen and (max-width: 880px) {
+        & {
+          padding: 100px 0;
+        }
+      }
+      h2 {
+        font-size: 3.5rem;
+        color: $--our-team-slogan-h2-C;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    .item.image {
+      height: 400px;
+      background-image: url(../../assets/images/our_team/our_team.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @media screen and (max-width: 880px) {
+        & {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+/*-------------------------------------------------*\
+    our-team-members section
+\*-------------------------------------------------*/
+.our-team-members {
+  %--card-bgC {
+    background-color: whitesmoke;
+  }
+  padding-bottom: 50px;
+  @media screen and (max-width: 480px) {
+    & {
+      padding-bottom: 50px;
+    }
+  }
+  .width-wrapper {
+    @include flex-col;
+    gap: 100px;
+    @media screen and (max-width: 480px) {
+      & {
+        width: 100%;
+        gap: 50px;
+      }
+    }
+  }
+  .group.ceo {
+    @extend %--card-bgC;
+    @include flex-row;
+    gap: 25px;
+    padding: 25px;
+
+    @media screen and (max-width: 805px) {
+      & {
+        @include flex-col;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+      }
+    }
+    .item {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1;
+              flex: 1 1;
+    }
+    .item.info {
+      @include flex-col;
+      gap: 10px;
+      -webkit-box-flex: 2;
+          -ms-flex: 2 1;
+              flex: 2 1;
+      @media screen and (max-width: 940px) {
+        & {
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1;
+                  flex: 1 1;
+        }
+      }
+
+      .name {
+        h3 {
+          font-size: 3rem;
+          @media screen and (max-width: 480px) {
+            & {
+              font-size: calc(3rem * 0.5);
+            }
+          }
+        }
+      }
+      .designation {
+        @include flex-col;
+        margin-bottom: 25px;
+      }
+    }
+    .item.image {
+      min-height: 350px;
+      background-image: url(../../assets/images/our_team/team_members/girl.jpg);
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      img {
+        @extend %--width-height-100;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: top;
+           object-position: top;
+      }
+    }
+  }
+  //group team-members
+  .group.team-members {
+    @include flex-col;
+    gap: 55px;
+    padding: 25px;
+    @media screen and (max-width: 480px) {
+      & {
+        padding: 0px;
+      }
+    }
+    .heading {
+      @include flex-cen;
+      @media screen and (max-width: 480px) {
+        & {
+          font-size: calc(3rem * 0.4);
+        }
+      }
+    }
+    .team-members-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      gap: 25px;
+      @media screen and (max-width: 940px) {
+        & {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+      }
+      @media screen and (max-width: 480px) {
+        & {
+          @include flex-col;
+        }
+      }
+    }
+
+    .item {
+      @extend %--card-bgC;
+      @include flex-col;
+      padding: 5px;
+      @media screen and (max-width: 480px) {
+        & {
+          padding: 25px;
+        }
+      }
+      .image {
+        @extend %--width-height-100;
+        min-height: 350px;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+      }
+      .name {
+        margin-bottom: 2.5px;
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          @media screen and (max-width: 480px) {
+            & {
+              font-size: calc(3rem * 0.4);
+            }
+          }
+        }
+      }
+      .designation {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+    //team-members-list images
+    .item:nth-child(1) {
+      .image {
+        background-image: url(../../assets/images/our_team/team_members/boy.jpg);
+      }
+    }
+    .item:nth-child(2) {
+      .image {
+        background-image: url(../../assets/images/our_team/team_members/boy.jpg);
+      }
+    }
+    .item:nth-child(3) {
+      .image {
+        background-image: url(../../assets/images/our_team/team_members/girl.jpg);
+      }
+    }
+
+    //add another here .item:nth-child(5) and so on
+    /*  .item:nth-child(4) {
+      .image {
+        background-image: url(../../assets/images/our_team/team_members/1657659227.jpg);
+      }
+    }*/
+  }
+}

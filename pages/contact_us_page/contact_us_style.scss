@@ -1,0 +1,210 @@
+/*import sass*/
+//import sass flex library
+@import "../../library/devtz007/sass/flex_library";
+@import "../../library/devtz007/sass/variable_placeholder_reusable";
+
+/*-------------------------------------------------*\
+    contact-us section
+\*-------------------------------------------------*/
+body {
+  background-color: #fbfbfb;
+}
+.contact-us {
+  position: relative;
+  padding-bottom: 200px;
+  @media screen and (max-width: 480px) {
+    padding-bottom: 100px;
+  }
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 55%;
+    background: rgb(230, 41, 97);
+    background: linear-gradient(
+      132deg,
+      rgba(230, 41, 97, 1) 0%,
+      rgba(242, 131, 69, 1) 100%
+    );
+  }
+  .width-wrapper {
+    @include flex-col;
+  }
+  .group:nth-child(1) {
+    @include flex-row;
+    position: relative;
+    & > * {
+      z-index: 1;
+    }
+    .item {
+      flex: 1 1;
+    }
+    .item.info {
+      @include flex-col;
+      gap: 25px;
+      padding: 150px 35px;
+
+      .heading {
+        h2 {
+          font-size: 5rem;
+          color: #fbfbfb;
+          @media screen and (max-width: 480px) {
+            & {
+              font-size: calc(5rem * 0.5);
+            }
+          }
+        }
+      }
+      .heading-info {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        & {
+          padding: 75px 0px;
+        }
+      }
+    }
+    .item.image {
+      //background-color: black;
+      background-image: url(../../assets/images/contact_us/contact.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @media screen and (max-width: 910px) {
+        & {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          opacity: 0.2;
+        }
+      }
+
+    }
+  }
+  .group:nth-child(2) {
+    %--this-group-pad {
+      padding: 55px;
+      @media screen and (max-width: 480px) {
+        padding: 15px;
+      }
+    }
+    @include flex-row;
+    gap: 25px;
+    @media screen and (max-width: 910px) {
+      @include flex-col;
+    }
+    .item {
+      flex: 1 1;
+    }
+    .item.contact-form {
+      @extend %--this-group-pad;
+      background: rgb(41, 51, 92, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0);
+
+      form {
+        @include flex-col;
+        gap: 25px;
+        .form-item {
+          @include flex-col;
+          gap: 8px;
+          label {
+            color: #fbfbfb;
+          }
+          input,
+          textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+          }
+        }
+        .myBtn-cont {
+          margin-top: 15px;
+          button {
+            padding: 15px 25px;
+            color: #fbfbfb;
+            background-color: #e62961;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+    .item.get-in-touch {
+      %--color {
+        color: #fbfbfb;
+      }
+      %--color-h3 {
+        color: #ffd60a;
+      }
+      h3 {
+        @extend  %--color-h3;
+      }
+      @extend %--this-group-pad;
+      @include flex-col;
+      gap: 15px;
+      background: #29335c;
+      border-radius: 8px;
+
+      .location {
+        @include flex-col;
+        gap: 10px;
+        .name {
+          p {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #ffd60a;
+            @media screen and (max-width: 480px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .location-info {
+          p {
+            @extend %--color;
+          }
+          ul {
+            @extend %--color;
+            list-style-type: circle;
+            margin-left: 50px;
+          }
+        }
+      }
+    }
+    .email {
+      a {
+        @extend %--color;
+      }
+      p {
+        @extend %--color;
+      }
+    }
+    .phone {
+      p {
+        @extend %--color;
+      }
+    }
+    .social {
+      @include flex-row;
+      gap: 15px;
+      a {
+        width: 35px;
+        height: 35px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
